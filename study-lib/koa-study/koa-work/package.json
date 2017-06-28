@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "koa": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "name": "koa-work",
+  "version": "1.0.0",
+  "description": "this is a work of koa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -w index.js"
+  },
+  "keywords": [
+    "koa",
+    "async",
+    "webframework"
+  ],
+  "author": "TerenYeung",
+  "license": "ISC"
+}

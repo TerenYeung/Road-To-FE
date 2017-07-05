@@ -448,3 +448,131 @@ HTTP在数据传输方向上是全双工的
 
 ### Email应用
 
+- Email应用的构成
+
+邮箱服务器
+  邮箱：用于存储发给该用户的Email
+  消息队列：存储待发送的Email
+
+SMTP协议
+  邮箱服务器之间进行消息传递所用的协议
+
+  客户端：发送消息的服务器
+  服务器：接收消息的服务器
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-a88063edd1bf7d47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  SMTP协议在传输层上使用TCP协议
+  端口：25
+  传输过程为3个阶段：握手、消息传输、关闭
+  命令/响应交互模式（有别于HTTP协议的请求/响应模式）
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-66bdd75c2af0cd3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fb0cfefada853f97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+SMTP的特点与HTTP的区别
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-727743fdb6a7b531.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- Email消息格式与POP3协议
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a52c39c7788d1a62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+SMTP只能支持ASCII字符，也就是SMTP服务器只能包含ASCII字符
+那么，其他多媒体文件word、音视频、中文等非ASCII文本怎么存储
+
+MIME(多媒体邮件扩展)
+在邮件头部增加额外的行以声明MIME的内容类型，以说明消息包含
+多媒体及其编码格式
+
+注：文件类型可分为文本文件和二进制文件
+
+文本文件就是以ASCII编码方式进行编码的文件
+二进制文件直接是以二进制形式存在的文件，如PDF/word/图片等，二进制文件可以通过特定的编码方式转为以文本文件形式存在的文件，如base64编码
+因此，上面Email的消息传输只能采用ASCII格式的文本文件，当传递其他多媒体文件时需要进行编码和指定文本类型
+
+通过在特定协议的头部添加额外头信息（content-type和Content-Transfer-Encoding)的方法扩展了协议本身，HTTP协议也是采用这种方法进行二进制文件的传输；
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-58bf73a01a312e82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 邮件访问协议
+从服务器获取邮件，SMTP协议是负责访问传输协议，邮件应用不仅仅使用一个协议
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1fcc5a022bc8f4e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+pop协议
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-df892c9a40d63b6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+### DNS应用
+
+在Internet上标识主机/路由器有两套系统：
+
+- IP地址（供网络层使用）
+- 域名地址(供人使用)
+
+那么域名和IP地址之间如何映射？
+通过域名解析系统DNS进行
+
+它可以将域名解析为IP地址
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f2e2cd05e5e39c7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+如何理解DNS服务实现的负载均衡？
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e498b4a9285f9121.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+根服务器
+顶级域名服务器
+上面为了获取www.amazon.com的域名进行了3次查询；
+
+ - DNS根域名服务器
+ 本地域名服务器无法解析时，访问根域名服务器，如果根域名服务器也不知，则继续访问权威域名服务器，直到获取映射为止，将映射返回给本地域名服务器
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e241a1ff5e195728.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- TLD顶级域名服务器和权威域名服务器
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-bba74e3900daa665.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 本地域名解析服务器
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-83227616ec517e45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+DNS查询实例
+
+- 迭代查询
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1495d374f120982c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 递归查询
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f8c68cf8984056eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- DNS记录缓存与更新
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7d657dd8263473f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- DNS记录和消息格式
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-4011b644d1440322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- DNS协议与消息格式
+- 如何注册域名
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-30f4957f733ca3ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## P2P应用
+
+- 原理
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-79fb671a75507ecb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+### socket
+
+- 文件分发
+

@@ -570,9 +570,99 @@ DNS查询实例
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-79fb671a75507ecb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+- 文件分发
+
 ---
 
-### socket
+### socket编程
 
-- 文件分发
+- 网络程序设计接口
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e581d8b36550b297.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 应用编程接口API
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-8650f537902d3fd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+几种典型的应用编程接口
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b0b59613d000b528.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9a0cb911a9e030c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+应用进程对外进行标识该进程的套接字（应用进程之间进行通信的接口）通过IP地址+端口号唯一标识
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-8d7ff88b2261c1cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-56ce321e36336afc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-91e89ea62f8b41e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-91e89ea62f8b41e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1c083de78b59b5ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fbb3ead0e9aec79f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+TCP协议的套接字类型为SOCK_STREAM
+UDP协议的套接字类型为SOCK_DGRAM
+这两类套接字给应用层提供的服务不同
+
+
+面向连接是指在真正进行数据传输时，必须要先建立连接
+
+无连接指有数据传输，双方不需要直接交互，直接发送
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3ca3445532b727f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-702843efbc11ef90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-702843efbc11ef90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-4bace65b81a48281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7fcd73d50b4ffc9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a794377d41d0e0b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a1ee45e37e0747c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+如果不新建套接字，那么服务器只能在某个时刻为某个服务器进行服务，无法实现并发服务
+
+发送数据
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-96c49f4816fb2be0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+接收数据
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a6713b10ae17b3bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Sockset API列表
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-09f002f75eaf11ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-cf6a15ab40929532.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 网络字节顺序
+表示层解决数据表示转换问题——客户端和服务端之间进行数据通信时，这两端的数据表示不一时，
+表示层就可以就数据进行转换，
+在使用TCP/IP协议进行数据传输时，首先要将本地字节序转换为网络字节序
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-17842202c4c49793.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- C/S架构下Socket通信的流程
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-6959a150fbf67049.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+客户端编程
+
+- 解析服IP地址
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c50d85aac0bb5e97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 解析服务器端口号
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-aba2146237243c61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 解析协议号
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e5e972891c26c686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- TCP客户端软件流程
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-33cc7f1bfc1f58c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- UDP客户端软件流程
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-de5b898696c15d85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

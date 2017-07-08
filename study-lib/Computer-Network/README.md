@@ -666,3 +666,132 @@ Sockset API列表
 - UDP客户端软件流程
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-de5b898696c15d85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+---
+基于套接字的服务器端的编程
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a22b7879832143af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 循环无连接服务器
+循环：一次只处理一个客户请求，处理完后再处理下一个客户请求
+无连接：基于UDP协议采用无连接的数据传输方法
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2c9dd3f037183993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 循环面向连接服务器
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ba16e9dd8d7fbc83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 并发无连接服务器
+一个线程创建之后处理一个请求
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-bcc6678bf2c9dfeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 并发面向连接服务器
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e498cc2c0857707a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 传输层
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c4ba53e65937f941.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 传输层协议
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1d39bb8e00089626.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 传输层 vs 网络层
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e52b5c6d9d97c850.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-76eab0b6a86401bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+### 多路复用和多路分用
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-279560b6f3371707.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 分用的工作原理
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1936577ee8e8deef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  - 无连接分用
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-26fc89ab7ac8208c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7005e918150f318c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  - 面向连接的分用
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-be485f424fef0578.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+TCP协议是点对点的，所以两端应用连接时必须是不同的进程，但是也可以通过开辟多线程实现这一技术
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b35956d22e22b956.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+### 无连接传输协议
+
+- UDP
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1cfc3c57588cddab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-463414a65591f7b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+### 可靠数据传输原理
+如何将不可靠的信道转化为可靠的信道，实现可靠数据传输？
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ab5ec2d50c3ac667.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f27b9debb0bd5300.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+有限状态自动机
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3f9da622a7c77d49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+有限状态自动机刻画网络协议
+
+Rdt 1.0研究可靠信道上的可靠数据传输协议
+
+Rdt 2.0研究不可靠信道的可靠数据传输协议
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-247641e19c886e6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c23ebfcd8352d0f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fd14f95f1c4747dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Rdt 2.1 和 2.2
+
+Rdt 3.0停等操作
+由于停等操作导致Rtd的性能较差
+
+流水线机制可以提高资源利用率
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-6cfe42dca218113e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-657af8a68b601462.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-dad3be41b1792c36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+### TCP 协议
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2b463b44fb839f7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-28538e6757bdfa18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b39b5a31772d9bf5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+TCP的流量控制机制
+
+上层应用可能处理buffer中数据的速度较慢，若发送方传输的数据过多、过快，那么
+有可能导致buffer溢出
+
+流量控制就是控制发送方传输的数据不至于过多过快
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b9ebe4845d2f4f79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9bc369252b0b2194.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- TCP连接管理
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c56455684ba8e022.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d9cb62bcebdcb661.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

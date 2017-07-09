@@ -795,3 +795,124 @@ TCP的流量控制机制
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-c56455684ba8e022.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-d9cb62bcebdcb661.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 拥塞控制原理
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-0b691b1927ce8234.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+可靠数据传输解决的是端到端的“个体利益”的数据传输的问题
+拥塞控制从“群体利益” 的角度去解决数据传输问题
+
+拥塞控制：不要让中间的网络承受不了数据量
+流量控制：发送方数据传输量不要太快和太大，以至于接收方接收不过来
+
+拥塞的成因：
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-5207ea4cd668c71d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+如何进行拥塞控制
+管制发送方的发送速率
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-065e7adfaf8b8ddb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- TCP拥塞控制机制
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-388985657a1ab466.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 网络层
+传输层是端到端的层次，而网络层不再局限于端到端
+
+基本过程:
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-79d3deb8f0b2a23b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+网络层的核心功能——转发与路由
+
+数据报datagram在通过路由器时，会通过路由算法确定通过网络的端到端的路径，
+而当前路由器的转发表则根据计算出的路径确定本路由如何转发分组
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e27690343acadcba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+网络层核心功能——连接建立
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-135bacf5c6f5556c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3f3455bc20e5636d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+提供无连接服务的网络：数据报网络
+提供连接服务的网络：虚电路网络
+
+- 虚电路网络
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fc87e8a782688ace.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+之所以称为虚电路，是因为电路交换是采用多路复用技术将同一个电路分成多路，
+而分组交换则是利用链路的全部带宽并且采用电路交换的技术，因此是“虚电路”
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c32fc726c23ebfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-74f3d34ec9aa24a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+从源主机和目的主机会建立一条虚电路(VC)，沿路的每段链路都有一个不同的VCID
+沿着该虚电路传输的分组，携带对应虚电路的VCID而不是目的地址，
+路由器在转发分组时依据转发表改写虚电路号
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f295229545cccb7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c5018a310a4c26cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 数据报网络
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-0a4555bb4476a09f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-871f819b6f5c9988.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ea87e9d65d22959f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-5cdc3ad2a902d871.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### IPv4协议
+
+Internet网络层主要是数据报网络
+数据报网络层主要提供的服务是路由和转发功能
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-970576e91c1c30a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+IP数据报的格式
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9fa31baa7b851e0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- IP分片
+
+之所以要进行IP分片，原因是传输的IP分组数据报大小超过链路的MTD,所以要进行分片
+
+  -最大传输单元(MTU)
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-63fe03e133507d3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-dbb9ebb205e788b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ - IP编址
+ 
+ 点分十进制IP地址
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-0a156f2286a2dfdf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ 具有相同网络号的主机构成的网络叫做IP子网
+ 因此，当路由器执行路由功能时只需要记录相应收发网络的IP子网就可以了
+
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-ecf2c1da6edb0cbe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ - 有类IP地址
+ 如何去规范网络号和主机号所占据的位数
+
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-2a7fcf7940a7dbb1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-91b3f9e8659b55ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ 私有ip地址：只能在企业或组织内部使用，在公共网络上是无法识别的
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-621ef4dc84b90ac6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

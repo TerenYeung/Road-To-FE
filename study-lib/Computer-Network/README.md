@@ -916,3 +916,32 @@ IP数据报的格式
 
  私有ip地址：只能在企业或组织内部使用，在公共网络上是无法识别的
  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-621ef4dc84b90ac6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ - IP子网和子网掩码
+
+ 子网划分
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-aca7a879e22da357.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b814977077f8544a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+子网掩码？
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-48864aaa3988a034.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- CIDR与路由聚合
+- IPv6
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e4766bb16cfd4bd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e4766bb16cfd4bd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ - 路由算法
+ 将网络抽象为图
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-0081081c0d5433b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+ ![image.png](http://upload-images.jianshu.io/upload_images/1993435-31ed9af032586d6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d01e21507c2b9325.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+

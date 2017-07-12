@@ -944,4 +944,74 @@ IP数据报的格式
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-d01e21507c2b9325.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+---
+
+## 数据链路层
+
+链路可分为物理链路和数据链路，
+物理链路处于物理层，数据链路处于数据链路层
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b1cb22749714dc56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+帧同步：
+作为数据链路层的数据帧，在物理层传输中是一系列的比特
+从另一端物理层接收到一串串的比特流，怎样识别出数据帧呢？
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1f5a084d7927aff5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1f5a084d7927aff5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-11ef1a510db5eb2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ffb80ad10ec26816.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+将数据报通过网卡的控制器构造成数据帧
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-88c01cd399059a71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+- 多路访问控制协议
+如果在一个网络中使用广播链路或共享物理介质，需要一个机制来协调谁使用这一广播链路或介质
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-47688e37ca8f5531.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 局域网
+
+-MAC地址
+
+当构造数据帧时，可以通MAC地址标识数据帧从哪里发出，由哪个节点进行接收
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-03eccee070f83461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b8d3747218fae82b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+MAC地址与IP地址区别：
+ MAC地址相当于身份证，用于标识数据帧，是一个平面地址
+ IP地址相当于邮政地址，用于标识数据报，是一个层次地址，依赖于节点具体位于网络的哪个子网
+
+ ARP协议：地址解析协议
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f398b039efcbea21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+如果发送端事先不知道接收端的MAC地址呢？
+如果两端处于同一个局域网，则通过广播的方式
+
+如果两端不在同一个局域网中？
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-cc999878dbfe1df5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-0c9cd0a70756c4dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+
+
+
+
+
+
 

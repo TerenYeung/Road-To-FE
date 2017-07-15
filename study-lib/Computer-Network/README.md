@@ -1007,11 +1007,195 @@ MAC地址与IP地址区别：
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-0c9cd0a70756c4dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ---
+### 以太网
+居统治地位的有线LAN技术
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-96494b889fbbbc85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+以太网在链路层属于无连接、不可靠的服务
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-96494b889fbbbc85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-139a1743ac5f6c29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+以太网交换机
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-cd10b80716522c51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-58a5b5228a9ddcce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+PPP协议
+点对点数据链路协议
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-caa120ee2cca47df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 无线局域网
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-caa120ee2cca47df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 网络安全
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-788ed7db0bbcf447.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a575126454e478e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-021ed7b52ef23446.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-30f6465ea1299db1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-63867d110443c78e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d4b5fb1e16919163.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f05a7fe7229c7e98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-aa3705a6ae6fb43a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ead5bebeeb551c67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 密码学基础
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-910aa4cc9df86408.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+根据在加密和解密过程中使用的密钥相同与否：
+将加密方法分成两大类：
+  对称密钥加密
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-412d21c53afcb6fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  公开密钥加密
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-23bae5bd6b7e9f76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-b3448a88208d2a19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  - 传统加密方法
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-5292fe3e106561f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2af0fed33e4993cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-887cf683425437ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-8212d2cca0e32325.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7eb6ebee428d63a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 现代加密技术
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-473ee1862cec745a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3cb0fc83096d0691.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-36f12ef0a2d3e9ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-44a8953624b4f607.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 数据加密标准DES
+- 非对称密钥
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-749ee9d7bc774fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-82d964fbc341cdda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-4889784742df967b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b43ec0cab91c888a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-314894626ef111dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-49ddc5f443815d9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 身份认证
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9dc850cdbf302c1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2b1ab92134a389da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-31c83ad5e596d24c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ff4288fbe7b57e27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f2a2443939a0de40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
 
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-61adfe210258da26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f5833859642e2ef5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-01a284b090a0a258.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c6f7d4af19dfa806.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9afc9fdb0daac516.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 报文完整性
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1725c221ff76f129.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-8e229859c1cc1d66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-58daec138237d10f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-170f6fbdf06197b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-aa751cb10889daed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e6626ecf3c4ebdfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-0ea3ee3c0ce8e12f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 数字签名
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d16407bf9ee92184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b3354e3326cf9fe6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-723a11b49574bc6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+报文摘要签名
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f36bd6a242f23aa1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 密钥分发中心
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-df32772f61e8d2c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1e607ed685a3ff9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-4a6604ce302d7eea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 公钥问题
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ea826e78eff99f05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-50151def78fa8417.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a926887d98c033da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-463b68ccc3759b97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

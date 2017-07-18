@@ -145,3 +145,26 @@ unsigned int GetFibonacci(unsigned int n)
   else
     return GetFibonacci(n-1) + GetFibonacci(n-2);
 }
+
+// 判断某个字符是否为数字数字字符
+bool IsDigit(char c) {
+  if(c >= '0' && c <= '9')
+    return true;
+  else
+    return false;
+}
+
+bool IsDigit(char c) {
+  if( c>= 48 && c <= 57)
+    return true;
+  else
+    return false;
+}
+
+// 将字符转换为大写字符
+char ToUpperCase(char c) {
+  if(c >= 'a' && c <= 'z')
+    return c - 'a' + 'A';
+  else
+    return c;
+}

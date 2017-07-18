@@ -1,4 +1,4 @@
-void PriintWelcomeInfo();
+void PrintWelcomeInfo();
 
 void InitializeGame();
 

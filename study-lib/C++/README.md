@@ -18,6 +18,54 @@
  MONTH month;
 ```
 
+- 复合数据类型
+字符、数组和结构体
+
+  - 字符
+  ```
+    char ch;
+    const char cch = 'C';
+  ```
+  字符文字使用单引号对
+
+  > 正常情况下，字符存储使用8位的ASCII码对一个字符进行存储
+  使用UNICODE字符集，使用2个字节16位对一个字符进行存储
+  ```
+  # 字符表示的等价性
+
+  char a = 'A';
+  char a = 65;
+  char a = 0101;
+  char a = 0x41;
+  ```
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e05f78b9352db7a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  - 数组
+  数组的定义
+  将具有相同性质的数据元素构成一个整体，构成单一维度上的数据序列
+  ```
+  元素类型 数组名称[常数表达式]
+  常数表达式必须为常数或常量，在C下则必须是常数
+  int a[8];
+  ```
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e67971d735130538.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-02c8535714a6b442.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-049d288a56b9922b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  - 结构体
+  ```
+    struct 结构体名称 {
+      成员类型1 成名名称1
+    }
+  ```
+
+  数组 vs 结构体
+  数据不能整体赋值，因此不能作为函数的返回值
+  而结构体是可以以整体赋值，因此可以作为函数返回值
 ### 表达式
 
 - 递增递减表达式
@@ -218,5 +266,5 @@ static关键字
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-feb142ec04eaadcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-483d4a77e0abaea1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

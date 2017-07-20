@@ -66,6 +66,91 @@
   数组 vs 结构体
   数据不能整体赋值，因此不能作为函数的返回值
   而结构体是可以以整体赋值，因此可以作为函数返回值
+
+---
+
+### 指针
+
+每一个变量或是数据对象有四个基本特征：VANT
+```
+V => value
+A => address
+N => name
+T => type
+```
+一般程序编译完成后，name和type都会缺失
+
+- 数据对象的地址和值
+地址就是数据对象的存储位置，一般以在计算机的存储设备的编号表示
+
+值就是该位置所存储的内容
+
+- 指针的定义
+
+```
+ int *p; // *用于表示该变量为指针变量，是指向整数的指针；
+ struct POINT {
+   int x, y;
+ }
+ POINT *p;
+```
+
+```
+int *p;指针修饰符
+p 指针变量，用于获取指针指向的地址
+*p 引领操作符，用于获取指针变量p上的值
+&n 取值操作符，用于获取变量n的地址
+```
+
+- 指针变量的存储布局
+
+```
+  // 指向原始数据类型
+  int n = 10; int *p = &n;
+  // 指向数据
+  int a[2] = {1, 2};
+  int *p = a; // 指向数组的基地址（首元素地址），相当于 &a || &a[0]
+
+```
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fa6d160737b17243.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 指针的意义
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-66ae784d61af53c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 常量指针与指针常量
+
+常量指针：指向常量的指针，不能通过引领操作符修改指针所指向的目标数据对象的值
+```
+  int n = 10;
+  const int *p = &n;
+```
+指针常量：指针指向的位置不可变化，但可以改变指针所指向的目标数据对象的值
+```
+  int n = 10;
+  int * const p = &n;
+```
+常量指针常量
+```
+const int * const p = &n;
+```
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-625662f1e2e3f90e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 指针和复合数据类型
+  - 指针与数组
+  ```
+
+  ```
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-114fffe7141d498a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-a4dd3c2666f2d446.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-7e32d5c2500dde50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-b2a0787fed69f804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  
+---
+
 ### 表达式
 
 - 递增递减表达式

@@ -148,7 +148,97 @@ const int * const p = &n;
 
   ![image.png](http://upload-images.jianshu.io/upload_images/1993435-b2a0787fed69f804.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+  [注]多维数组作为函数参数
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-fd871ca61b96305c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  建议按照第1种方案
+
+  ```
+    void PrintTwoDemensinalArray(int *a, unsigned int m, unsigned int n) {
+      unsigned int i, j;
+      for(i=0; i<m; i++)
+        for(j=0; j<n; j++)
+          cout << *(a+n*i+j) << ";";
+    }
+    
+    int a[2][3] = { {1, 2, 3}, {4, 5, 6}};
+    PrintTwoDimensinalArray(a, 2, 3);
+  ```
+
+- 指针与结构体
+```
+  struct STUDENT { int id; STRING name; int age;};
+  STUDENT student= { 1, "teren", 18};
+  STUDENT *pstudent = &student;
+
+  (*pstudent).age = 20;
+  pstudent->id = 2
+
+  ![image.png](http://upload-images.jianshu.io/upload_images/1993435-610168a824fdf9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+```
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-324ab4b6a39603b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-5556e395d4bca264.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+- 字符串
+字符串的表示
+  - 作为字符数组
+  - 作为指向字符的指针
+  - 作为抽象的字符串整体
   
+字符数组
+```
+  char s[5] = {'h', 'e', 'l', 'l', 'o'};
+```
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2a38abd2f91a390a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+如何区分存储空间刚好存储连续的多个字符数组？
+在字符数组末尾添加结束标志'\0'
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-56cda649c00396ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e102842c360a0ada.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-38865755eea2efbe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-33361802ce2616e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-777cfb0f1d7c62b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+```
+  为什么数组不能直接赋值？
+  char s[9];
+  s = "CPP-Prog";
+上面语句表示，为字符数组分配9个字节的存储空间用于存储9个元素，s = "CPP-Prog"这句表示将 "CPP-Prog"该字符串的基地址赋值给字符串数组的9个元素，故是错误；
+
+C++中，数组不能直接赋值，本质上就是为数组赋值时，本来要为其赋多个值，结果只整体赋了一个值
+```
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7f6836863de8e2d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fe4aab5f09e1ebc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9778844afc4022eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a492fdfdbb4890a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d68551509b667ec4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-5ab055e7eef5aad7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 ---
 
 ### 表达式

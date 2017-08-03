@@ -443,3 +443,51 @@ static关键字
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-483d4a77e0abaea1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+---
+
+## 程序抽象
+
+- 数据封装
+
+将数据结构的细节隐藏起来
+
+- 信息隐藏
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-0793bff82c848e70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+数据封装和信息隐藏合在一起实现程序抽象
+
+---
+
+## 链表
+
+- 链表的含义
+  每个元素与前后元素相链接的元素序列
+- 链表的意义
+  存储顺序访问的数据对象集
+  数据对象占用的存储空间是动态分配的
+
+- 节点
+  每个元素就是一个节点，每个节点包括数据域和链接域
+  头指针和尾指针是指向表头和表尾的两个指针
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9a8abcfb2041762e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-714968707a41bdc5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-37ef36ec56b90420.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-6c79f5a8eda65ee3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-68d19ee0417dbbda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9b0650f3d1846bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fceb8aa8980cdce4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

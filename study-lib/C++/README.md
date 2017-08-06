@@ -491,3 +491,43 @@ static关键字
 
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-fceb8aa8980cdce4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-53b535f838f21d6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+- 函数指针
+指向函数的指针
+
+```
+  void * 用于表示抽象的数据对象，即可以指向任意数据类型的数据对象的地址，表明目标数据对象是未知的
+```
+
+```
+ char *(* as_string)(ADT object)
+ 变量 as_string 指向一个函数，该函数接收 ADT 类型的参数， 返回值是 char *;
+```
+
+- 函数指针的使用
+
+```
+ char *returned_value;
+ PPOINT pt = PtCreate(10, 20);
+ as_string = DoTransformObjectIntoString;
+ returned_value = as_string((ADT)pt);
+ // 标准格式如下：
+ return_value = (*as_string)((ADT)pt);
+```
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7c171277e060fa6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-817257e756c5a136.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-08e1e4a0fe229cf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2a1deaca622295cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 抽象链表
+

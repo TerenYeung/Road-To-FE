@@ -531,3 +531,214 @@ static关键字
 
 - 抽象链表
 
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-38cf6fcfda25181c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1be08c6c484da575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1a57bcd20aac72ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-72120e19d599b1e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+## 类与对象
+
+结构化程序设计与面向对象程序设计
+
+结构化程序设计，以一个个函数为单位去组织代码
+
+结构化程序设计与函数式编程，函数式编程属于结构化程序设计的一种
+
+结构化程序设计过渡到面向对象程序设计
+
+- 程序抽象与面向对象
+
+```
+// 点库结构 "point.h"
+struct POINT;
+typedef struct POINT *PPOINT;
+
+PPOINT PtCreate(int x, int y);
+void PtDestroy( PPOINT point);
+void PtGetValue( POINT point, int *x, int *y );
+void PtSetValue( PPOINT point, int x, int y );
+bool PtCompare( PPOINT point1, PPOINT point2 );
+char *PtTransformIntoString( PPOINT point );
+void PtPrint( PPOINT point );
+```
+
+```
+// 点库实现 "point.cpp"
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include "point.h"
+using namespace std;
+static char* DuplicateString (const char*s);
+struct POINT {
+  int x, y;
+}
+
+PPOINT PtCreate (int x, int y)
+{
+  PPOINT t = new POINT;
+  t->x = x;
+  t->y = y;
+  return t;
+}
+
+void PtDestroy( PPOINT point )
+{
+  if (point) {
+    delete point;
+  }
+}
+
+void PtGetValue( PPOINT point, int *x, int *y)
+{
+  if (point)
+  {
+    if (x) *x = point->x;
+    if (y) *y = point->y;
+  }
+}
+
+void PtSetValue( PPOINT point, int x, int y)
+{
+  if (point)
+  {
+    point->x = x;
+    point->y = y;
+  }
+}
+
+bool PtCompare( PPOINT point1, PPOINT point2)
+{
+  if (!point1 || !point2)
+  {
+    cout << "PtCompare: Parameter(s) illegal." << endl;
+    exit(1);
+  }
+  return (point1->x == point2->x) && (point1->y == point2->y);
+}
+
+void PtPrint( PPOINT point)
+{
+  if (point)
+    printf("(%d, %d"), point->x, point->y);
+  else
+    printf("NULL");
+}
+
+char *PtTransformIntoString(PPOINT point)
+{
+  char buf[BUFSIZ];
+  if (point)
+    sprintf(buf, "(%d, %d)", point->x, point->y);
+    return DuplicateString(buf);
+  else
+    return "NULL"
+}
+
+char *DuplicateString( const char *s)
+{
+  unsigned int n = strlen(s);
+  char *t = new char[n+1];
+  for (int i = 0; i<n; i++)
+    t[i] = s[i];
+  t[n] = '\0';
+  return t;
+}
+```
+
+- 类的概念与意义
+
+类是属性和行为的统一
+
+对象是量
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e1bbdc9bb7fbaaa8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-17d21787e4942eb7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+```
+  // 有这么一个接口库
+  // 有这么一个结构体 POINT
+  // 封装了它的数据成员，x 和 y
+  // 封装了它对应的函数
+  // 将点库的数据和操作集封装在一起，实现了代码的属性和行为的统一
+  // 这么一种代码组织方式就是面向对象的技术，通过创造一个类去具体实现
+```
+![](http://upload-images.jianshu.io/upload_images/1993435-5cbc61eabf1a9a27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 类类型
+
+上面的代码无法限制程序猿访问结构体的成员数据对象，因此我们需要一种对程序数据的访问加以限制的特殊数据结构，这就是类类型
+
+类的声明
+
+```
+class A
+{
+  // 访问控制
+  public: // 数据成员公开
+    memberType memberName;
+  protected: // 有限公开
+    memberType memberName;
+  private: // 成员私有
+    memberType memberName;
+}
+// 实际上，使用 struct 也可以定义类，区别在于访问控制上
+```
+如果没有访问控制关键字，那么数据成员默认为 private;
+而如果是 struct 缺省的话，则是 public;
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9f4f3c3ed96d5f3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+- 对象
+
+对象的定义和使用
+
+```
+int main()
+{
+  Circle circle;
+  circle.SetOrigin(0.0, 0.0);
+  circle.SetRadius(1.0);
+  cout << "Perimeter:" << circle.GetPerimeter() << endl;
+  cout << "Area:" << circle.GetArea() << endl;
+  return 0;
+}
+```
+
+对象的构造
+
+构造就是对象的初始化其数据成员
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1b1496d87b45f09c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+如何实现——使用构造函数
+
+拷贝对象函数
+
+构造函数的初始化列表
+
+对象的析构
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-91d2ec7b8cc9baa7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-38e67c8b48af9a2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 类与对象的成员
+
+内联函数
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-27e36be89b478221.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+

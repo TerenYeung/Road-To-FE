@@ -118,6 +118,8 @@ i = 30;
 
 所谓标识符，就是标识变量的名字;
 
+编译器在编译过程中把用到变量的地方替换成对应的值
+
 - 复合类型
 
 基于其他类型定义的类型，C++ 有两种复合类型：引用和指针
@@ -171,6 +173,75 @@ int *p3 = NULL;
 - void*
 可用于存放任意对象的地址
 
+- const 限定符
+const 对象一旦创建后其值就不能再改变
+```
+const int i = 12; // correct
+const int k; // error: k 未初始化
+```
+
+> 想要在多个文件之间共享 const 对象，必须在变量的定义之前添加 extern 关键字
+```
+// file.cc
+extern const int bufSize =fcn();
+// file.h
+extern const int bufSize;
+
+引用与 const
+```
+const int i = 1024;
+const int &r = i;
+const int &r1 = 42; // 正确：r1 是一个常量引用
+```
+
+指针与 const
+```
+const double pi = 3.14;
+const double *cptr = &pi;
+
+const 指针
+```
+int i = 0;
+const *const p = &i; // 把 * 放在 const 前说明指针是一个常量，即不变的是指针本身而非指向的值
+```
+
+顶层 const 与底层 const
+
+用 `top-level const` 表示指针本身是个常量
+用 `low-level const` 表示指针所指向的对象是一个常量
+```
+int i = 41;
+int *const p1 = &i; // 不能改变 p1 的值，顶层 const
+const int *p2 = &i; // 允许改变 p2 的值，底层 
+```
+
+constexpr 和常量表达式
+```
+const int i = 1;
+const int limit = i + 1;
+int j = 2; // 不是常量表达式
+const int k = get_size(); // 不是常量表达式
+```
+C++11 允许将变量声明为 constexpr 类型以便有编译器验证变量值是否为常量表达式
+```
+constexpr int i = 10;
+constexpr int *j = nullptr;
+```
+
+const、指针与引用之间的关系 ！！！
+
+-  处理类型
+类型别名是某种类型的同义词，使用类型别名的好处是让复杂的类型名字变简单和知道该类型的真实目的；
+
+```
+typedef double wages; // wages 是 double 的同义词
+typedef wages base, *p; // base 是 double 同义词，p 是 doube* 同义词
+```
+新标准规定，使用别名声明定义类型别名
+
+```
+using SI = Sales_item; // SI 是 Sales_item 的同义词
+```
 
 ---
 

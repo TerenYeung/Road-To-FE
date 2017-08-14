@@ -152,3 +152,206 @@ IO 中断事件
 ---
 
 ### 进程及其状态
+
+- 进程的概念
+
+进程是一个具有一定独立功能的程序关于某个数据集合的一次``运行活动``，简单讲就是程序的运行活动
+
+进程是操作系统进行资源分配和调度的一个独立单位
+
+![](http://upload-images.jianshu.io/upload_images/1993435-2961d0c0dd9edc2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![](http://upload-images.jianshu.io/upload_images/1993435-5edaae2f42986118.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f7760ffe78cfabad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 进程的状态
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-366a1f519ccef35f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+进程 3 态的转化
+![](http://upload-images.jianshu.io/upload_images/1993435-5727d30822cb0557.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+进程挂起
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a015d2cb18ce7b1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-6bf299ef7443293a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+### 进程的数据描述
+
+- 进程控制块
+
+记录进程的状态
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-69edc5a62634ed29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 标识信息
+
+![](http://upload-images.jianshu.io/upload_images/1993435-3e4a74af2f42ed2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 现场信息
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-96a07aa12ac06fbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 控制信息
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d46f9a5447437dd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 进程映象
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fb7fae3916905b7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](http://upload-images.jianshu.io/upload_images/1993435-6da1fbc2d41eb46f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 进程上下文
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a792869a938fc2c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+### 进程管理
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b5a96c51bc4afb6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-001897f784d34989.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-6505dbd803fd1540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 进程的控制与管理
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3498c954727ec252.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 原语
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-be128f211de9630e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+---
+
+### 进程切换与模式切换
+
+- 进程切换
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-54a5dc949e2e9812.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-23cfdf951b1be527.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-f30ff8b2ffbcd662.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+以上工作由硬件完成，进程切换过程实际上就是中断处理程序的工作流程
+
+---
+
+多线程技术
+
+- 单线程结构
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3dc00a969929d145.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 单线程结构在并发程序设计上的问题
+
+![](http://upload-images.jianshu.io/upload_images/1993435-ea765af1f2fff541.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 多线程结构进程
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-95b12a0416b645d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-aa9474e92731e94b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+线程无挂起态，挂起与资源有关，线程没有独立的资源
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-353b9aa21e827962.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ed985b5230400611.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 多线程实现技术
+
+- 内核级线程 KLT
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e0cf12e1e8577371.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-373c2ab952f8b06d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 用户级线程 ULT
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-b143d80a9316d032.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d37b5c98b4468893.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-d67f86888b931a57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-fba47d317c058b4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-4db765bfa399c1ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 多线程实现的混合策略
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-226f0666b61b18d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-a297a958b64b8896.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-840156272f09187d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 多线程实现的混合策略分类
+
+![](http://upload-images.jianshu.io/upload_images/1993435-aaf44aff865790ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+### 处理器调度层次
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-e2cef1b0abb5fd66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-9576c79e9eac18ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1f638da96b4c85fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c78a860eef3aa813.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-beb41f4dac24c8a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+进程调度程序是操作系统最核心部分
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-77de5b1abd718e8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ec61db3dce40222e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 处理器调度算法
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-3a0e370d0e087fed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-ffefb7c30c10187e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![Uploading image_485974.png . . .]
+
+- 分级调度算法
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-2f814e75db8f6b1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+

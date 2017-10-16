@@ -86,3 +86,36 @@
 
 ![image.png](http://upload-images.jianshu.io/upload_images/1993435-31e0139b90f0fc13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+### 单连续分区存储管理
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-97a26b68d6194ff3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1c0858b7403d4859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-7634fef91b24bda9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+## 固定分区存储管理
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-4a27057611183885.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-952631d4f816c275.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+### 可变分区存储管理
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-1a3a5137b426575e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-111553e5bf798dca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-cfec7969bbc86257.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 页式存储管理
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-aa9644d5cbfc8171.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-01797bb933b476c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+

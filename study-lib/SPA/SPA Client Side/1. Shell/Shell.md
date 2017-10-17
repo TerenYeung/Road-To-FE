@@ -51,3 +51,22 @@ var spa = (function () {
 
 通过事件处理函数改变 hash 值，hash 值的变化导致不同的功能模块的变化
 
+### 添加功能模块
+
+- 功能模块
+
+功能模块向单页应用提供了精心定义和有作用域限制的功能
+
+- MVC 模式
+
+MVC 是开发应用的一种模式，具体包括：
+
+1. Model，应用的数据和业务逻辑
+2. View，模型数据的感官表现
+3. Controller，将用户的请求转换为命令，更新应用的模型或视图
+
+单页应用架构在多个层级采用重复的 MVC 模式，称为“分形模型-视图-控制器”
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-34ee94da4b76f8a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](http://upload-images.jianshu.io/upload_images/1993435-c51aa01486a1673e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

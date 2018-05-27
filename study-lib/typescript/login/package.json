@@ -1,0 +1,12 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "this is a demo for login",
+  "main": "index.js",
+  "author": "teren",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.3"
+  }
+}

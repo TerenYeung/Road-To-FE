@@ -1,14 +1,27 @@
-import React, { Component } from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { Component } from 'react';
 import './App.css';
 import TickPureComponent from './components/TickPureComponent'
 import TickComponent from './components/TickComponent'
 import CountChildren from './components/CountChildren'
 import RefComponent from './components/RefComponent'
 import LifecycleComponent from './components/LifecycleComponent'
-import DumpComponent from './components/DumpComponent'
+import DumpComponent from './components/Dump/DumpComponent'
+import {withMoize} from './components/HOC/withMoize'
 
 class App extends Component {
+  state = {
+    count: 0,
+  }
+
+  handleClick = () => {
+    this.setState({
+      count: ++this.state.count
+    })
+  }
+
   render() {
+    console.log('app render');
+    
     return (
       <div>
         <TickComponent />
@@ -37,7 +50,11 @@ class App extends Component {
         </React.Fragment>
         <RefComponent />
         <LifecycleComponent />
-        <DumpComponent title={'hello world'} />
+        {
+          withMoize(<DumpComponent title={`'hello world '${this.state.count}`} />)
+        }
+        <DumpComponent title={`'hello world '${this.state.count}`} />
+        <button onClick={this.handleClick}>click me</button>
       </div>
     )
   }

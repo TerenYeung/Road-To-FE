@@ -1,19 +1,19 @@
-import React, { Component } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { Component, PureComponent } from 'react';
 
-export default class CountChildren extends Component {
+export default class CountChildren extends PureComponent {
   state = {
     num: 0,
   }
+
   showChildren = () => {
     this.setState({
       num: React.Children.count(this.props.children)
     })
-    
   }
 
   render() {
     const {children} = this.props
-    console.log(React.Children.toArray(children));
+    console.log('count-children render');
     
     return (
       <div onClick={this.showChildren}>

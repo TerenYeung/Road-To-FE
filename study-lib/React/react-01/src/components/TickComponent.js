@@ -1,4 +1,4 @@
-import React, { Component } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { Component } from 'react';
 
 export default class TickComponent extends Component {
   state = {
@@ -12,7 +12,7 @@ export default class TickComponent extends Component {
   }
 
   render() {
-    console.log('Component');
+    console.log('tick-component render');
     
     const {tick} = this.state
     return (

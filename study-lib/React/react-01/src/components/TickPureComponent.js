@@ -1,4 +1,4 @@
-import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { PureComponent } from 'react';
 
 export default class TickPureComponent extends PureComponent {
   state = {
@@ -12,7 +12,7 @@ export default class TickPureComponent extends PureComponent {
   }
 
   render() {
-    console.log('pureComponent');
+    console.log('pure-component render');
     
     const {tick} = this.state
     return (

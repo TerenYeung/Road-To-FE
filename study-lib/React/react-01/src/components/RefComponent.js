@@ -1,4 +1,4 @@
-import React, { Component } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { Component } from 'react';
 
 const FancyButton = React.forwardRef((props, ref) => (
   <button ref={ref} className="FancyButton" onClick={props.onClick}>{props.children}</button>
@@ -13,14 +13,14 @@ export default class RefComponent extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.inputRef.current);
-    console.log(React.isValidElement(this.inputRef));
+    // console.log(this.inputRef.current);
+    // console.log(React.isValidElement(this.inputRef));
     
     this.inputRef.current.focus()
   }
 
   handleClick = () => {
-    console.log(this.childRef.current);
+    // console.log(this.childRef.current);
     
   }
 

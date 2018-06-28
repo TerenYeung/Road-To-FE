@@ -1,4 +1,4 @@
-import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react'
+import React, { PureComponent } from 'react'
 
 export default class LifecycleComponent extends PureComponent {
   state = {
@@ -16,8 +16,6 @@ export default class LifecycleComponent extends PureComponent {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextState)
-    
     if (nextState.time !== this.state.time) return false
     return true
   }
